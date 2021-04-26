@@ -9,6 +9,8 @@ app.use(cors())
 app.use(bodyParser.json())
 
 conectarDB()
+//Requerir las rutas
+require('./routes/noteroute')(app)
 
 app.listen(3000, ()=> {
     console.log('Servidor arriba')
