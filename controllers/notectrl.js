@@ -6,7 +6,7 @@ exports.create = (req,res) => {
             message:'No se agregaron datos'
         })
     } 
-    
+  
     const note = new Note({
         type:req.body.type
     })
