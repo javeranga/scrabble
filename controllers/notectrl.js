@@ -20,3 +20,17 @@ exports.create = (req,res) => {
         })
     })
 }
+
+exports.getAll=(req,res)=>{
+    Note.find()
+    .populate('student_id')
+    .exec()
+    .then(notes=>{
+        res.send(notes)
+    })
+    .catch (error=>{
+        res.status(500).send({
+            message:error.mesage || 'No se encontraron estudiantes'
+        })
+    }) 
+}
