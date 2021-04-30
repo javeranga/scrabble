@@ -8,6 +8,7 @@ exports.create = (req,res) => {
     } 
   
     const note = new Note({
+        student_id:req.body.student_id,
         type:req.body.type
     })
 
