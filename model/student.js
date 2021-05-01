@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+mongoose.set('useFindAndModify',false)
+mongoose.Promise=global.Promise
 
-var studentSchema=new Schema({
+const studentSchema=new mongoose.Schema({
     firstName: {type:String,required:true},
     lastName:{type:String,required:true},
     password:{type:String,required:true},
